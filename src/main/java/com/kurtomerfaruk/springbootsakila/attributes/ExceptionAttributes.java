@@ -1,8 +1,8 @@
 package com.kurtomerfaruk.springbootsakila.attributes;
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
