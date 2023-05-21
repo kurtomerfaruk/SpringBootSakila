@@ -6,3 +6,5 @@
 - Mysql Sakila Sample Database
 - Hazelcast
 
+You can use the link below to access the Swagger list.
+http://localhost:8080/swagger-ui.html

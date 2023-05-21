@@ -1,6 +1,8 @@
 package com.kurtomerfaruk.springbootsakila.models;
 
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,12 +25,14 @@ import java.util.Date;
 @Data
 @Table(name = "city")
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@ApiModel(value = "City Api model documentation", description = "Model")
 public class City implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "city_id")
+    @ApiModelProperty(value = "Unique id field of city object")
     private Integer cityId;
     @Column(name = "city")
     private String city;

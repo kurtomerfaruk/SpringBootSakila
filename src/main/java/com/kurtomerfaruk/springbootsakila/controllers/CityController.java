@@ -2,6 +2,8 @@ package com.kurtomerfaruk.springbootsakila.controllers;
 
 import com.kurtomerfaruk.springbootsakila.models.City;
 import com.kurtomerfaruk.springbootsakila.services.CityService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/cities")
+@Api(value = "City Api documentation")
 public class CityController extends BaseController{
 
     private CityService cityService;
@@ -31,6 +34,7 @@ public class CityController extends BaseController{
     }
 
     @GetMapping
+    @ApiOperation(value = "City list method")
     public List<City> getAllCity(){
         logger.info("> getAllCity");
         return cityService.getAll();
